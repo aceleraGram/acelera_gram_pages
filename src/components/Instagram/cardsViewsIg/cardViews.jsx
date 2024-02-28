@@ -1,15 +1,16 @@
 import styled from "styled-components"
+import { FaRegEye } from "react-icons/fa6";
 
-export default function CardFollowerWorld() {
+export default function CardViews() {
     return (
         <>
             <Container>
                 <Header>
-                    <img src="https://static.vecteezy.com/system/resources/previews/018/887/528/original/earth-globe-icon-png.png"></img>
+                    <FaRegEye size={90} color="#5E17EB"/>
                 </Header>
                 <Body>
-                    <p className="title">Seguidores Mundiais</p>
-                    <p>Seguidores mundiais, ideal para quem busca valores mais acessíveis</p>
+                    <p className="title">Visualizações</p>
+                    <p>Ideal para quem quer milhares de visualizações por um valor acessível</p>
                 <Button>
                     Saiba mais
                 </Button>
@@ -24,9 +25,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+-webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
+-moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
+box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 border-radius: 20px;
-width: 300px;
+width: 200px;
 background-color: #101728;
 .button{
     margin-bottom: 30px;

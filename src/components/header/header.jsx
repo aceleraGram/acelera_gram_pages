@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import logoBoneco from "../../assets/logoboneco.png"
 import { useNavigate } from "react-router-dom"
+import imgTexture from "../../assets/des3.png"
 
 export default function Header() {
   const navigate = useNavigate()
@@ -20,6 +21,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: #5E17EB;
+background-image: url(${imgTexture});
 img{
     width: 60px;
     margin-top: 30px;

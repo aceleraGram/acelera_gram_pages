@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import brasilLogo from "../../assets/Brazil_flag_300.png"
+import brasilLogo from "../../../assets/Brazil_flag_300.png"
 export default function CardFollowerBr() {
     return (
         <>
@@ -24,9 +24,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+-webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
+-moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
+box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 border-radius: 20px;
-width: 300px;
+width: 200px;
 background-color: #101728;
 .button{
     margin-bottom: 30px;

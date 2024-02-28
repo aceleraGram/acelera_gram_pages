@@ -1,15 +1,24 @@
 import styled from "styled-components"
-import CardFollowerBr from "../components/cardsFollowers/cardFollowerBr"
-import CardFollowerWorld from "../components/cardsFollowers/cardFollowerWorld"
+import CardFollowerBr from "../components/Instagram/cardsFollowersIg/cardFollowerBr"
+import CardFollowerWorld from "../components/Instagram/cardsFollowersIg/cardFollowerWorld"
 import { FaArrowDown } from "react-icons/fa";
+import CardViews from "../components/Instagram/cardsViewsIg/cardViews";
+import CardLikesIgWorld from "../components/Instagram/likesIg/cardLikesIgWorld";
+import CardLikesIgBr from "../components/Instagram/likesIg/cardLikesIgBr";
+import imgTexture from "../assets/des3.png"
+import logoBoneco from "../assets/logoboneco.png"
+import { FaInstagram } from "react-icons/fa";
 
 export default function Instagram() {
     return (
         <>
             <Container>
+              <Header>
+                <img src={logoBoneco}></img>
+              </Header>
                 <InfosPage>
                     <div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" className="instalogo"></img>
+                      <FaInstagram size={35}/>
                         <h1>Instagram</h1>
                     </div>
                     <p>Escolha a melhor opção para você e ganhe visibilidade, autoridade e credibilidade</p>
@@ -19,7 +28,16 @@ export default function Instagram() {
                     <CardFollowerBr />
                     <Divider />
                     <CardFollowerWorld />
+                    <Divider />
+                    <CardViews/>
+                    <Divider />
+                    <CardLikesIgWorld/>
+                    <Divider />
+                    <CardLikesIgBr/>
                 </Cards>
+                <Footer>
+                  <p>AceleraGram © 2024 Todos os direitos reservados.</p>
+                </Footer>
             </Container>
         </>
     )
@@ -30,18 +48,19 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
-padding: 50px;
--webkit-box-shadow: 0px 13px 9px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 13px 9px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 13px 9px 0px rgba(0,0,0,0.75);
+padding: 30px;
 background-color: #5E17EB;
-border-radius: 0 0 50% 50%;
+background-image: url(${imgTexture});
+
 @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
   }
   h1{
     font-size: 30px;
+  }
+  p{
+    text-align: center;
   }
 `
 
@@ -52,9 +71,13 @@ width: 50px;
 
 const Cards = styled.div`
 display: flex;
+justify-content: center;
+width: 700px;
+flex-wrap: wrap;
 @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
+    width: auto;
   }
 `
 const InfosPage = styled.div`
@@ -63,7 +86,7 @@ align-items: center;
 flex-direction: column;
 padding: 10px 20px;
 border-radius: 10px;
-margin-bottom: 50px;
+margin-bottom: 30px;
 color: white;
 p{
     margin-bottom: 20px;
@@ -89,4 +112,29 @@ div{
       }
     }
   }
+`
+
+const Header = styled.div`
+
+img{
+    width: 60px;
+    border-radius: 100%;
+    animation: float 2s ease-in-out infinite;
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+}`
+
+const Footer = styled.div`
+color: white;
+width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 70px;
 `
