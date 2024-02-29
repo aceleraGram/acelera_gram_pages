@@ -47,7 +47,7 @@ export default function FollowerIgWorld() {
           <img src={logoBoneco} onClick={() => navigate("/instagram")}></img>
         </Header>
         <InfosPage>
-          <div>
+          <div onClick={() => navigate("/instagram")}>
             <FaInstagram size={35} />
             <h1>Instagram</h1>
           </div>
