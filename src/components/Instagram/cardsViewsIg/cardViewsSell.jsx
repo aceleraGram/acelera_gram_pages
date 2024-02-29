@@ -1,21 +1,20 @@
 import styled from "styled-components"
-import coraçao from "../../../assets/coraçao.png"
-import { useNavigate } from "react-router-dom"
+import { FaRegEye } from "react-icons/fa6";
 
-export default function CardLikesIgWorld(){
-    const navigate = useNavigate()
-    return(
+export default function CardViewsSell({quantidade, valor}) {
+    const url = `https://wa.me/5512981338091?text=Olá%20aceleragram%20gostaria%20de%20${quantidade}%20Visualizações!`
+    return (
         <>
-        <Container>
+            <Container>
                 <Header>
-                    <img src={coraçao}></img>
+                <FaRegEye size={90} color="#5E17EB"/>
                 </Header>
                 <Body>
-                    <p className="title">Curtidas Mundiais</p>
-                    <p>Ideal para quem procura bombar uma publicação por um valor acessível</p>
-                <Button onClick={()=> navigate("/instagram/curtidasMd")}>
-                    Saiba mais
-                </Button>
+                    <p className="title"><span>{quantidade}</span> Visualizações</p>
+                    <p>R$ {valor}</p>
+                    <Button href={url}>
+                        Saiba mais
+                    </Button>
                 </Body>
             </Container>
         </>
@@ -73,7 +72,7 @@ p{
 }
 `
 
-const Button = styled.div`
+const Button = styled.a`
 background-color: #5E17EB;
 padding: 15px;
 margin-top: 20px;

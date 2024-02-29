@@ -1,21 +1,19 @@
 import styled from "styled-components"
-import coraçao from "../../../assets/coraçao.png"
-import { useNavigate } from "react-router-dom"
-
-export default function CardLikesIgWorld(){
-    const navigate = useNavigate()
-    return(
+import brasilLogo from "../../../assets/Brazil_flag_300.png"
+export default function CardFollowerBr({quantidade, valor}) {
+    const url = `https://wa.me/5512981338091?text=Olá%20aceleragram%20gostaria%20de%20${quantidade}%20seguidores%20brasileiros!`
+    return (
         <>
-        <Container>
+            <Container>
                 <Header>
-                    <img src={coraçao}></img>
+                    <img src={brasilLogo}></img>
                 </Header>
                 <Body>
-                    <p className="title">Curtidas Mundiais</p>
-                    <p>Ideal para quem procura bombar uma publicação por um valor acessível</p>
-                <Button onClick={()=> navigate("/instagram/curtidasMd")}>
-                    Saiba mais
-                </Button>
+                    <p className="title"><span>{quantidade}</span> Seguidores Brasileiros</p>
+                    <p>R$ {valor}</p>
+                    <Button href={url}>
+                        Saiba mais
+                    </Button>
                 </Body>
             </Container>
         </>
@@ -26,7 +24,7 @@ const Container = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30px;
+margin-top: 25px;
 flex-direction: column;
 -webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 -moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
@@ -34,6 +32,7 @@ box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 border-radius: 20px;
 width: 200px;
 background-color: #101728;
+
 .button{
     margin-bottom: 30px;
     margin-top: 30px;
@@ -73,7 +72,7 @@ p{
 }
 `
 
-const Button = styled.div`
+const Button = styled.a`
 background-color: #5E17EB;
 padding: 15px;
 margin-top: 20px;

@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import brasilLogo from "../../../assets/Brazil_flag_300.png"
+import { useNavigate } from "react-router-dom"
 export default function CardFollowerBr() {
+    const navigate = useNavigate()
     return (
         <>
             <Container>
@@ -10,7 +12,7 @@ export default function CardFollowerBr() {
                 <Body>
                     <p className="title">Seguidores Brasileiros</p>
                     <p>Seguidores brasileiros, ideal para quem busca crescer seu perfil</p>
-                <Button>
+                <Button onClick={()=> navigate("/instagram/seguidoresBr")}>
                     Saiba mais
                 </Button>
                 </Body>
@@ -48,6 +50,7 @@ padding: 5px;
 img{
     width: 80px;
     border-radius: 20px;
+    cursor: pointer;
 }
 `
 

@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import coraçaoBrasil from "../../../assets/coraçãoBrasil.png"
+import { useNavigate } from "react-router-dom"
 
 export default function CardLikesIgBr(){
+    const navigate = useNavigate()
     return(
         <>
         <Container>
@@ -11,7 +13,7 @@ export default function CardLikesIgBr(){
                 <Body>
                     <p className="title">Curtidas Brasileiras</p>
                     <p>Ideal para quem procura bombar uma publicação passando autoridade</p>
-                <Button>
+                <Button onClick={()=> navigate("/instagram/curtidasBr")}>
                     Saiba mais
                 </Button>
                 </Body>

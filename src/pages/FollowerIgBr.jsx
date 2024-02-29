@@ -1,46 +1,71 @@
 import styled from "styled-components"
-import CardFollowerBr from "../components/Instagram/cardsFollowersIg/cardFollowerBr"
-import CardFollowerWorld from "../components/Instagram/cardsFollowersIg/cardFollowerWorld"
 import { FaArrowDown } from "react-icons/fa";
-import CardViews from "../components/Instagram/cardsViewsIg/cardViews";
-import CardLikesIgWorld from "../components/Instagram/likesIg/cardLikesIgWorld";
-import CardLikesIgBr from "../components/Instagram/likesIg/cardLikesIgBr";
 import imgTexture from "../assets/des3.png"
 import logoBoneco from "../assets/logoboneco.png"
 import { FaInstagram } from "react-icons/fa";
+import CardFollowerBrSell from "../components/Instagram/cardsFollowersIg/cardFollowerBrSell";
+import { useNavigate } from "react-router-dom";
 
-export default function Instagram() {
-    return (
-        <>
-            <Container>
-              <Header href="https://aceleragram.github.io/acelera_gram/">
-                <img src={logoBoneco}></img>
-              </Header>
-                <InfosPage>
-                    <div>
-                      <FaInstagram size={35}/>
-                        <h1>Instagram</h1>
-                    </div>
-                    <p>Escolha a melhor opção para você e ganhe visibilidade, autoridade e credibilidade</p>
-                    <FaArrowDown className="arrow"/>
-                </InfosPage>
-                <Cards>
-                    <CardFollowerBr />
-                    <Divider />
-                    <CardFollowerWorld />
-                    <Divider />
-                    <CardViews/>
-                    <Divider />
-                    <CardLikesIgWorld/>
-                    <Divider />
-                    <CardLikesIgBr/>
-                </Cards>
-                <Footer>
-                  <p>AceleraGram © 2024 Todos os direitos reservados.</p>
-                </Footer>
-            </Container>
-        </>
-    )
+export default function FollowerIgBr() {
+  const navigate = useNavigate()
+  const seguidoresBr = [{
+    quantidade: 100,
+    valor: "6,00"
+  }, {
+    quantidade: 200,
+    valor: "12,00"
+  },
+  {
+    quantidade: 400,
+    valor: "20,00"
+  }, {
+    quantidade: 500,
+    valor: "25,00"
+  }, {
+    quantidade: 1000,
+    valor: "35,00"
+  }, {
+    quantidade: 2000,
+    valor: "50,00"
+  }, {
+    quantidade: 3000,
+    valor: "75,00"
+  }, {
+    quantidade: 4000,
+    valor: "100,00"
+  }, {
+    quantidade: 5000,
+    valor: "145,00"
+  }]
+  return (
+    <>
+      <Container>
+        <Header>
+          <img src={logoBoneco} onClick={() => navigate("/instagram")}></img>
+        </Header>
+        <InfosPage>
+          <div>
+            <FaInstagram size={35} />
+            <h1>Instagram</h1>
+          </div>
+          <p>Escolha a melhor opção para você e ganhe visibilidade, autoridade e credibilidade</p>
+          <FaArrowDown className="arrow" />
+        </InfosPage>
+        <Cards>
+          {seguidoresBr.map((br)=> (
+            <>
+            <CardFollowerBrSell quantidade={br.quantidade} valor={br.valor}/>
+            <Divider />
+            </>
+          ))}
+          
+        </Cards>
+        <Footer>
+          <p>AceleraGram © 2024 Todos os direitos reservados.</p>
+        </Footer>
+      </Container>
+    </>
+  )
 }
 
 const Container = styled.div`
@@ -51,6 +76,9 @@ align-items: center;
 padding: 30px;
 background-color: #5E17EB;
 background-image: url(${imgTexture});
+.title{
+    font-size: 20px;
+}
 
 @media (max-width: 700px) {
     display: flex;
@@ -72,7 +100,7 @@ width: 50px;
 const Cards = styled.div`
 display: flex;
 justify-content: center;
-width: 700px;
+width: 1000px;
 flex-wrap: wrap;
 @media (max-width: 700px) {
     display: flex;
@@ -114,12 +142,13 @@ div{
   }
 `
 
-const Header = styled.a`
+const Header = styled.div`
 
 img{
     width: 60px;
     border-radius: 100%;
     animation: float 2s ease-in-out infinite;
+    cursor: pointer;
     @keyframes float {
       0%,
       100% {

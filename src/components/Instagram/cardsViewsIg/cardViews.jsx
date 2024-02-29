@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { FaRegEye } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 export default function CardViews() {
+    const navigate = useNavigate()
     return (
         <>
             <Container>
@@ -11,7 +13,7 @@ export default function CardViews() {
                 <Body>
                     <p className="title">Visualizações</p>
                     <p>Ideal para quem quer milhares de visualizações por um valor acessível</p>
-                <Button>
+                <Button onClick={()=> navigate("/instagram/visualizações")}>
                     Saiba mais
                 </Button>
                 </Body>

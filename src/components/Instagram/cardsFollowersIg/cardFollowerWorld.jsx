@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 
 export default function CardFollowerWorld() {
+    const navigate = useNavigate()
     return (
         <>
             <Container>
@@ -10,7 +12,7 @@ export default function CardFollowerWorld() {
                 <Body>
                     <p className="title">Seguidores Mundiais</p>
                     <p>Seguidores mundiais, ideal para quem busca valores mais acessíveis</p>
-                <Button>
+                <Button onClick={()=> navigate("/instagram/seguidoresMd")}>
                     Saiba mais
                 </Button>
                 </Body>
