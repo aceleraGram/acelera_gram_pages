@@ -1,16 +1,15 @@
 import styled from "styled-components"
-import { FaRegEye } from "react-icons/fa6";
-
-export default function CardViewsSell({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Visualizações%20no%20Instagram!`
+import brasilLogo from "../../../assets/Brazil_flag_300.png"
+export default function CardFollowerBr({quantidade, valor}) {
+    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20seguidores%20brasileiros%20no%20TikTok!`
     return (
         <>
             <Container>
                 <Header>
-                <FaRegEye size={90} color="#5E17EB"/>
+                    <img src={brasilLogo}></img>
                 </Header>
                 <Body>
-                    <p className="title"><span>{quantidade}</span> Visualizações</p>
+                    <p className="title"><span>{quantidade}</span> Seguidores Brasileiros</p>
                     <p>R$ {valor}</p>
                     <Button href={url}>
                         Saiba mais
@@ -25,7 +24,7 @@ const Container = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30px;
+margin-top: 25px;
 flex-direction: column;
 -webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 -moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
@@ -33,6 +32,7 @@ box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 border-radius: 20px;
 width: 200px;
 background-color: #101728;
+
 .button{
     margin-bottom: 30px;
     margin-top: 30px;

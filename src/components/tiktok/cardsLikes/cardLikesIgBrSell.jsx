@@ -1,16 +1,16 @@
 import styled from "styled-components"
-import { FaRegEye } from "react-icons/fa6";
+import coraçaoBrasil from "../../../assets/coraçãoBrasil.png"
 
-export default function CardViewsSell({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Visualizações%20no%20Instagram!`
+export default function CardLikesIgBrSell({quantidade, valor}) {
+    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Curtidas%20Brasileiras%20no%20TikTok!`
     return (
         <>
             <Container>
                 <Header>
-                <FaRegEye size={90} color="#5E17EB"/>
+                <img src={coraçaoBrasil}></img>
                 </Header>
                 <Body>
-                    <p className="title"><span>{quantidade}</span> Visualizações</p>
+                    <p className="title"><span>{quantidade}</span> Curtidas Brasileiras</p>
                     <p>R$ {valor}</p>
                     <Button href={url}>
                         Saiba mais

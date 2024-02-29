@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import brasilLogo from "../../../assets/Brazil_flag_300.png"
 export default function CardFollowerBr({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20seguidores%20brasileiros!`
+    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20seguidores%20brasileiros%20no%20Instagram!`
     return (
         <>
             <Container>

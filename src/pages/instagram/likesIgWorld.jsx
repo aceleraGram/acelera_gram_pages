@@ -1,41 +1,32 @@
 import styled from "styled-components"
 import { FaArrowDown } from "react-icons/fa";
-import imgTexture from "../assets/des3.png"
-import logoBoneco from "../assets/logoboneco.png"
+import imgTexture from "../../assets/des3.png"
+import logoBoneco from "../../assets/logoboneco.png"
 import { FaInstagram } from "react-icons/fa";
-import CardFollowerBrSell from "../components/Instagram/cardsFollowersIg/cardFollowerBrSell";
 import { useNavigate } from "react-router-dom";
+import CardLikesIgWorldSell from "../../components/Instagram/likesIg/cardLikesIgWorldSell";
 
-export default function FollowerIgBr() {
+export default function LikesIgWorld() {
   const navigate = useNavigate()
-  const seguidoresBr = [{
-    quantidade: 100,
-    valor: "6,00"
-  }, {
+  const LikesIg = [{
     quantidade: 200,
-    valor: "12,00"
+    valor: "2,00"
+  }, {
+    quantidade: 400,
+    valor: "3,50"
   },
   {
-    quantidade: 400,
-    valor: "20,00"
-  }, {
-    quantidade: 500,
-    valor: "25,00"
+    quantidade: 600,
+    valor: "5,50"
   }, {
     quantidade: 1000,
-    valor: "35,00"
+    valor: "10,00"
   }, {
     quantidade: 2000,
-    valor: "50,00"
+    valor: "18,00"
   }, {
-    quantidade: 3000,
-    valor: "75,00"
-  }, {
-    quantidade: 4000,
-    valor: "100,00"
-  }, {
-    quantidade: 5000,
-    valor: "145,00"
+    quantidade: 6000,
+    valor: "35,00"
   }]
   return (
     <>
@@ -52,9 +43,9 @@ export default function FollowerIgBr() {
           <FaArrowDown className="arrow" />
         </InfosPage>
         <Cards>
-          {seguidoresBr.map((br)=> (
+          {LikesIg.map((lk)=> (
             <>
-            <CardFollowerBrSell quantidade={br.quantidade} valor={br.valor}/>
+            <CardLikesIgWorldSell quantidade={lk.quantidade} valor={lk.valor}/>
             <Divider />
             </>
           ))}
@@ -123,6 +114,7 @@ div{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .instalogo{
     width: 40px;

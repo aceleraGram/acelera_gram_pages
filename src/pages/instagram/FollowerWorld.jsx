@@ -1,32 +1,43 @@
 import styled from "styled-components"
 import { FaArrowDown } from "react-icons/fa";
-import imgTexture from "../assets/des3.png"
-import logoBoneco from "../assets/logoboneco.png"
+import imgTexture from "../../assets/des3.png"
+import logoBoneco from "../../assets/logoboneco.png"
 import { FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import CardLikesIgWorldSell from "../components/Instagram/likesIg/cardLikesIgWorldSell";
-
-export default function LikesIgWorld() {
+import CardFollowerWorldSell from "../../components/tiktok/cardsFollowers/cardFollowerWorldSell";
+export default function FollowerIgWorld() {
   const navigate = useNavigate()
-  const LikesIg = [{
-    quantidade: 200,
-    valor: "2,00"
+  const seguidoresWorld = [{
+    quantidade: 100,
+    valor: "3,00"
   }, {
-    quantidade: 400,
-    valor: "3,50"
+    quantidade: 200,
+    valor: "5,00"
   },
   {
-    quantidade: 600,
-    valor: "5,50"
-  }, {
-    quantidade: 1000,
+    quantidade: 400,
     valor: "10,00"
   }, {
-    quantidade: 2000,
-    valor: "18,00"
+    quantidade: 500,
+    valor: "13,00"
   }, {
-    quantidade: 6000,
+    quantidade: 1000,
+    valor: "19,00"
+  }, {
+    quantidade: 2000,
     valor: "35,00"
+  }, {
+    quantidade: 3000,
+    valor: "50,00"
+  }, {
+    quantidade: 4000,
+    valor: "60,00"
+  }, {
+    quantidade: 5000,
+    valor: "76,00"
+  }, {
+    quantidade: 10000,
+    valor: "150,00"
   }]
   return (
     <>
@@ -43,9 +54,9 @@ export default function LikesIgWorld() {
           <FaArrowDown className="arrow" />
         </InfosPage>
         <Cards>
-          {LikesIg.map((lk)=> (
+          {seguidoresWorld.map((world)=> (
             <>
-            <CardLikesIgWorldSell quantidade={lk.quantidade} valor={lk.valor}/>
+            <CardFollowerWorldSell quantidade={world.quantidade} valor={world.valor}/>
             <Divider />
             </>
           ))}
@@ -114,6 +125,7 @@ div{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .instalogo{
     width: 40px;

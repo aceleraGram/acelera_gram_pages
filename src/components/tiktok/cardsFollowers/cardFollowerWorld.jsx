@@ -1,20 +1,20 @@
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
-import { FaRegEye } from "react-icons/fa6";
 
-export default function CardViewsSell({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Visualizações%20no%20Instagram!`
+export default function CardFollowerWorld() {
+    const navigate = useNavigate()
     return (
         <>
             <Container>
                 <Header>
-                <FaRegEye size={90} color="#5E17EB"/>
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/887/528/original/earth-globe-icon-png.png"></img>
                 </Header>
                 <Body>
-                    <p className="title"><span>{quantidade}</span> Visualizações</p>
-                    <p>R$ {valor}</p>
-                    <Button href={url}>
-                        Saiba mais
-                    </Button>
+                    <p className="title">Seguidores Mundiais</p>
+                    <p>Seguidores mundiais, ideal para quem busca valores mais acessíveis</p>
+                <Button onClick={()=> navigate("/tiktok/seguidoresMd")}>
+                    Saiba mais
+                </Button>
                 </Body>
             </Container>
         </>
@@ -25,7 +25,6 @@ const Container = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30px;
 flex-direction: column;
 -webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 -moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
@@ -72,7 +71,7 @@ p{
 }
 `
 
-const Button = styled.a`
+const Button = styled.div`
 background-color: #5E17EB;
 padding: 15px;
 margin-top: 20px;

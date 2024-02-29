@@ -1,39 +1,40 @@
 import styled from "styled-components"
 import { FaArrowDown } from "react-icons/fa";
-import imgTexture from "../assets/des3.png"
-import logoBoneco from "../assets/logoboneco.png"
+import imgTexture from "../../assets/des3.png"
+import logoBoneco from "../../assets/logoboneco.png"
 import { FaInstagram } from "react-icons/fa";
-import CardFollowerBrSell from "../components/Instagram/cardsFollowersIg/cardFollowerBrSell";
 import { useNavigate } from "react-router-dom";
-import CardViewsSell from "../components/Instagram/cardsViewsIg/cardViewsSell";
-
-export default function ViewsIg() {
+import CardFollowerBr from "../../components/tiktok/cardsFollowers/cardFollowerBrSell";
+export default function FollowerIgBr() {
   const navigate = useNavigate()
-  const viewsIg = [{
-    quantidade: 1000,
-    valor: "5,75"
+  const seguidoresBr = [{
+    quantidade: 100,
+    valor: "6,00"
   }, {
-    quantidade: 2000,
-    valor: "10,75"
+    quantidade: 200,
+    valor: "12,00"
   },
   {
-    quantidade: 3000,
-    valor: "15,00"
+    quantidade: 400,
+    valor: "20,00"
   }, {
-    quantidade: 4000,
-    valor: "18,00"
+    quantidade: 500,
+    valor: "25,00"
   }, {
-    quantidade: 5000,
-    valor: "22,00"
+    quantidade: 1000,
+    valor: "35,00"
   }, {
-    quantidade: 6000,
-    valor: "30,00"
-  }, {
-    quantidade: 10000,
+    quantidade: 2000,
     valor: "50,00"
   }, {
-    quantidade: 100000,
-    valor: "150,00"
+    quantidade: 3000,
+    valor: "75,00"
+  }, {
+    quantidade: 4000,
+    valor: "100,00"
+  }, {
+    quantidade: 5000,
+    valor: "145,00"
   }]
   return (
     <>
@@ -50,9 +51,9 @@ export default function ViewsIg() {
           <FaArrowDown className="arrow" />
         </InfosPage>
         <Cards>
-          {viewsIg.map((vw)=> (
+          {seguidoresBr.map((br)=> (
             <>
-            <CardViewsSell quantidade={vw.quantidade} valor={vw.valor}/>
+            <CardFollowerBr quantidade={br.quantidade} valor={br.valor}/>
             <Divider />
             </>
           ))}

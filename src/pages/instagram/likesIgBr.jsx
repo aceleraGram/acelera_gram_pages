@@ -1,11 +1,10 @@
 import styled from "styled-components"
 import { FaArrowDown } from "react-icons/fa";
-import imgTexture from "../assets/des3.png"
-import logoBoneco from "../assets/logoboneco.png"
+import imgTexture from "../../assets/des3.png"
+import logoBoneco from "../../assets/logoboneco.png"
 import { FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import CardLikesIgBrSell from "../components/Instagram/likesIg/cardLikesIgBrSell";
-
+import CardLikesIgBrSell from "../../components/tiktok/cardsLikes/cardLikesIgBrSell";
 export default function LikesIgBr() {
   const navigate = useNavigate()
   const viewsIg = [{
@@ -114,6 +113,7 @@ div{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .instalogo{
     width: 40px;

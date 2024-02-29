@@ -1,20 +1,21 @@
 import styled from "styled-components"
-import { FaRegEye } from "react-icons/fa6";
+import coraçaoBrasil from "../../../assets/coraçãoBrasil.png"
+import { useNavigate } from "react-router-dom"
 
-export default function CardViewsSell({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Visualizações%20no%20Instagram!`
-    return (
+export default function CardLikesBr(){
+    const navigate = useNavigate()
+    return(
         <>
-            <Container>
+        <Container>
                 <Header>
-                <FaRegEye size={90} color="#5E17EB"/>
+                    <img src={coraçaoBrasil}></img>
                 </Header>
                 <Body>
-                    <p className="title"><span>{quantidade}</span> Visualizações</p>
-                    <p>R$ {valor}</p>
-                    <Button href={url}>
-                        Saiba mais
-                    </Button>
+                    <p className="title">Curtidas Brasileiras</p>
+                    <p>Ideal para quem procura bombar uma publicação passando autoridade</p>
+                <Button onClick={()=> navigate("/tiktok/curtidasBr")}>
+                    Saiba mais
+                </Button>
                 </Body>
             </Container>
         </>
@@ -25,7 +26,6 @@ const Container = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30px;
 flex-direction: column;
 -webkit-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
 -moz-box-shadow: 0px 0px 76px 0px rgba(16,23,40,1);
@@ -72,7 +72,7 @@ p{
 }
 `
 
-const Button = styled.a`
+const Button = styled.div`
 background-color: #5E17EB;
 padding: 15px;
 margin-top: 20px;
