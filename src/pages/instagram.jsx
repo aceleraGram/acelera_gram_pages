@@ -17,7 +17,7 @@ export default function Instagram() {
                 <img src={logoBoneco}></img>
               </Header>
                 <InfosPage>
-                    <div onClick={() => navigate("/instagram")}>
+                    <div>
                       <FaInstagram size={35}/>
                         <h1>Instagram</h1>
                     </div>
