@@ -2,7 +2,7 @@ import styled from "styled-components"
 import coraçaoBrasil from "../../../assets/coraçãoBrasil.png"
 
 export default function CardLikesIgBrSell({quantidade, valor}) {
-    const url = `https://wa.me/5512981338091?text=Olá%20aceleragram%20gostaria%20de%20${quantidade}%20Curtidas%20Brasileiras!`
+    const url = `https://wa.me/5512981338091?text=Olá%20AceleraGram%20gostaria%20de%20${quantidade}%20Curtidas%20Brasileiras!`
     return (
         <>
             <Container>
